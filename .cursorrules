@@ -1,0 +1,13 @@
+## Design style (whole site)
+Indigo and cream. Use the Tailwind tokens in tailwind.config.js (app-* for the logged-in app, brand-* and cream for the landing page). Poppins font, white cards with a thin border and rounded-2xl, primary buttons in indigo. Reference designs are in /design.
+
+## Redesign safety rules
+- Restyle only. Edit existing Blade files in place. Never recreate or delete a file.
+- Do not change controllers, routes, route names, models, migrations, policies, form requests, validation, seeders or tests.
+- Keep every form field name and id, @csrf, @method, old(), $errors, pagination, filter query strings and JavaScript behavior.
+- If a design shows something the app doesn't support (for example "Sign up with Google"), leave it out. Do not add backend code.
+- Design files contain sample data. Never copy it. Use the real variables.
+- Run php artisan test once at the end. If a test fails because visible text changed, tell me and don't edit the test.
+- Reply in 3 lines.
+
+

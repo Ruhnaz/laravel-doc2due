@@ -1,0 +1,17 @@
+# ExpiryTrack
+
+SaaS app that helps businesses track expiry dates of documents such as insurance certificates, licenses, and contracts.
+
+## Project rules
+
+- Stack: Laravel (latest), Breeze Blade, MySQL, Tailwind CSS, database queue driver. Laravel Cashier (Stripe) only in the last phase.
+- Use Form Requests, Policies, and Eloquent relationships.
+- Uploaded files go on a private disk, served only through authorized routes. Allowed types are PDF/JPG/JPEG, max 2 MB.
+- Reminders use a daily scheduled command and a reminder_logs table, unique on document_id + days_before, so emails are never sent twice.
+- Keep code simple, no unnecessary packages.
+- Plans (document limits): Starter free = 2, Basic $49/yr = 50, Business $149/yr = 200, Professional $399/yr = 600.
+- Only build what is asked in each prompt. Do not build future phases.
+
+## Design style
+
+Modern, clean SaaS look inspired by talna.ai. Tailwind only. Lots of white space, rounded-2xl cards, soft shadows, Inter font, one blue accent (#2563EB). Status colors: red = expired, amber = expiring in 0-7 days, yellow = 8-30 days, green = safe. Responsive, mobile first.
